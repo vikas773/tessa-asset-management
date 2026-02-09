@@ -1,0 +1,55 @@
+1. Secure Login & Authentication:
+    > Login using Company ID and password to ensure only authorized users can access the system.
+    > Supports future role-based access such as Admin, Manager, and Employee.
+
+2. Role-Based Access Control:
+    > Different users see only the information relevant to their role.
+    > Admins manage the system, managers track assets, and employees view assigned assets only.
+
+3. Employee Management:
+    > Admins can easily add, edit, or deactivate employee records.
+    > Employees are linked to departments for better asset organization.
+
+4. Asset Registration:
+    > Assets can be added with essential details like asset ID, category, purchase date, condition, and value.
+    > The process is designed to be fast and simple to use.
+
+5. Asset Allocation & Return:
+    > Assets can be assigned to employees and marked as returned with a single action.
+    > Reduces manual tracking and avoids confusion.
+
+6. Asset Status Management:
+    > Each asset clearly shows its status such as available, assigned, under maintenance, or retired.
+    > Helps teams make quick and informed decisions.
+
+7. Asset History & Audit Trail:
+    > Every asset movement and update is automatically recorded.
+    > Ensures accountability and supports audits.
+
+8. Maintenance & Service Tracking:
+    > Repair and maintenance details can be logged for each asset.
+    > Helps prevent asset breakdowns and extend asset lifespan.
+
+9. Search, Filter & Sorting:
+    > Assets and employees can be quickly found using search, filters, and sorting options.
+    > Improves daily usability for large asset lists.
+
+10. Dashboard Overview:
+     > A simple dashboard displays total, assigned, available, and maintenance assets at a glance.
+     > Provides management with a clear system overview.
+
+11. Reports & Data Export:
+     > Summary reports can be generated and exported to Excel or PDF.
+     > Supports management reviews and audits.
+
+12. Notifications & Alerts:
+     > Users can receive alerts for asset assignments, return reminders, or maintenance schedules.
+     > Helps ensure timely actions.
+
+13. Data Security & Backup:
+     > All data is securely stored with regular backups.
+     > Protects against data loss and unauthorized access.
+
+14. Scalability & Future Expansion:
+     > The system is designed to grow with the company.
+     > Supports future features without restructuring the system.
