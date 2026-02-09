@@ -1,3 +1,34 @@
+ASSET MANAGEMENT SOFTWARE – CLIENT UNDERSTANDING DOCUMENT
+
+
+1. Brief Understanding of Client Requirements
+---------------------------------------------
+The client requires an easy-to-use Asset Management Software to help track, assign, and manage company assets efficiently.
+The system should allow secure access, maintain employee and asset records, and provide clear visibility into asset usage and status.
+The primary goal is to reduce manual tracking, prevent asset loss, and improve accountability within the organization.
+
+
+2. Creative Freedoms Taken
+--------------------------
+- Chosen product name: Asset Management Software
+- Defined the scope as an internal company system (not customer-facing)
+- Designed the system with role-based access (Admin, Manager, Employee)
+- Included dashboard and reporting features for better usability
+- Structured features in a modular way to support future scalability
+
+
+3. Assumptions Made About Client Requirements
+---------------------------------------------
+- The system will be used internally by a single organization
+- Only authorized users will have access to the system
+- Initial users will be limited in number (small to medium organization)
+- Asset data will be entered manually (no hardware integration initially)
+- Advanced features like barcode scanning and mobile apps are future enhancements
+- Internet connectivity is available for system access
+
+
+4. Feature List with Short Descriptions
+---------------------------------------
 1. Secure Login & Authentication:
     > Login using Company ID and password to ensure only authorized users can access the system.
     > Supports future role-based access such as Admin, Manager, and Employee.
@@ -53,3 +84,13 @@
 14. Scalability & Future Expansion:
      > The system is designed to grow with the company.
      > Supports future features without restructuring the system.
+
+
+5. Questions for Next Client Meeting
+------------------------------------
+1. What type of assets should be tracked initially (IT assets, machinery, tools, etc.)?
+2. How many user roles are required in the first version?
+3. Do employees need self-service access or view-only access?
+4. Are reports required in a specific format (PDF, Excel)?
+5. What features are most critical for the first release (MVP)?
+
