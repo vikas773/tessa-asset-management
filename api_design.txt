@@ -1,0 +1,153 @@
+1.
+
+Feature: Register a new user
+API Endpoint: POST /api/auth/register
+Database Action: INSERT a new row into users table with name, email, hashed_password, role, created_at.
+
+2.
+
+Feature: Login user
+API Endpoint: POST /api/auth/login
+Database Action: SELECT user from users table by email for authentication.
+
+3.
+
+Feature: Logout user
+API Endpoint: POST /api/auth/logout
+Database Action: INSERT a new row into auth_logs table recording logout timestamp.
+
+4.
+
+Feature: View all users
+API Endpoint: GET /api/users
+Database Action: SELECT all rows from users table.
+
+5.
+
+Feature: View single user details
+API Endpoint: GET /api/users/{id}
+Database Action: SELECT row from users table WHERE id = given id.
+
+6.
+
+Feature: Update user role
+API Endpoint: PUT /api/users/{id}/role
+Database Action: UPDATE users table SET role = new_role WHERE id = given id.
+
+7.
+
+Feature: Deactivate user
+API Endpoint: PUT /api/users/{id}/deactivate
+Database Action: UPDATE users table SET status = 'Inactive' WHERE id = given id.
+
+8.
+
+Feature: Add a new asset
+API Endpoint: POST /api/assets
+Database Action: INSERT a new row into assets table with name, type, serial_number, purchase_date, status='Available'.
+
+9.
+
+Feature: View all assets
+API Endpoint: GET /api/assets
+Database Action: SELECT all rows from assets table.
+
+10.
+
+Feature: View single asset details
+API Endpoint: GET /api/assets/{id}
+Database Action: SELECT row from assets table WHERE id = given id.
+
+11.
+
+Feature: Update asset details
+API Endpoint: PUT /api/assets/{id}
+Database Action: UPDATE assets table SET fields = new_values WHERE id = given id.
+
+12.
+
+Feature: Delete asset
+API Endpoint: DELETE /api/assets/{id}
+Database Action: DELETE row from assets table WHERE id = given id.
+
+13.
+
+Feature: Mark asset as broken
+API Endpoint: PUT /api/assets/{id}/mark-broken
+Database Action: UPDATE assets table SET status = 'Broken' WHERE id = given id.
+
+14.
+
+Feature: Mark asset as available
+API Endpoint: PUT /api/assets/{id}/mark-available
+Database Action: UPDATE assets table SET status = 'Available' WHERE id = given id.
+
+15.
+
+Feature: Assign asset to user
+API Endpoint: POST /api/assignments
+Database Action:
+INSERT a new row into assignments table (user_id, asset_id, assigned_date),
+AND UPDATE assets table SET status = 'Assigned'.
+
+16.
+
+Feature: View all assignments
+API Endpoint: GET /api/assignments
+Database Action: SELECT all rows from assignments table.
+
+17.
+
+Feature: View assignments by user
+API Endpoint: GET /api/users/{id}/assignments
+Database Action: SELECT rows from assignments table WHERE user_id = given id.
+
+18.
+
+Feature: Return assigned asset
+API Endpoint: PUT /api/assignments/{id}/return
+Database Action:
+UPDATE assignments table SET return_date = current_timestamp,
+AND UPDATE assets table SET status = 'Available'.
+
+19.
+
+Feature: Create maintenance ticket
+API Endpoint: POST /api/maintenance
+Database Action: INSERT new row into maintenance table with asset_id, issue_description, status='Open'.
+
+20.
+
+Feature: Update maintenance ticket status
+API Endpoint: PUT /api/maintenance/{id}/status
+Database Action: UPDATE maintenance table SET status = new_status WHERE id = given id.
+
+21.
+
+Feature: View maintenance history of asset
+API Endpoint: GET /api/assets/{id}/maintenance
+Database Action: SELECT rows from maintenance table WHERE asset_id = given id.
+
+22.
+
+Feature: View audit logs
+API Endpoint: GET /api/audit-logs
+Database Action: SELECT all rows from audit_logs table.
+
+23.
+
+Feature: Generate total asset count report
+API Endpoint: GET /api/reports/total-assets
+Database Action: SELECT COUNT(*) FROM assets table.
+
+24.
+
+Feature: Generate assigned asset report
+API Endpoint: GET /api/reports/assigned-assets
+Database Action: SELECT rows FROM assets table WHERE status = 'Assigned'.
+
+25.
+
+Feature: Generate broken asset report
+API Endpoint: GET /api/reports/broken-assets
+Database Action: SELECT rows FROM assets table WHERE status = 'Broken'.
